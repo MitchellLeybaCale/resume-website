@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Toggle Test</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f9f9f9;
+      padding: 20px;
+    }
+    section {
+      background: white;
+      padding: 20px;
+      margin-bottom: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    h2.toggle-header {
+      cursor: pointer;
+      user-select: none;
+      border-bottom: 2px solid #ddd;
+      padding-bottom: 8px;
+      color: #333;
+    }
+    .toggle-content {
+      display: none;
+      margin-top: 15px;
+      color: #555;
+    }
+    a {
+      color: #0066cc;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <section id="education">
+    <h2 class="toggle-header">Education</h2>
+    <div class="toggle-content">
+      <p>University of Colorado Boulder Leeds School of Business</p>
+      <p>BS in Business Administration with an emphasis in Finance and Data Analytics</p>
+      <p>Relevant courses:</p>
+      <ul>
+        <li>Communication Strategy</li>
+        <li>Mathematical Analysis in Business</li>
+        <li>Statistical Analysis in Business</li>
+        <li>Quantitative Finance</li>
+        <li>Data & Information Management</li>
+        <li>Business Ethics & Social Responsibility</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2 class="toggle-header">Contact</h2>
+    <div class="toggle-content">
+      <p>Email: <a href="mailto:mleybacale@gmail.com">mleybacale@gmail.com</a></p>
+      <p>LinkedIn: <a href="https://www.linkedin.com/in/mitchell-leyba-calee-9a5790294" target="_blank" rel="noopener noreferrer">www.linkedin.com/in/mitchell-leyba-calee-9a5790294</a></p>
+      <p>GitHub: <a href="https://github.com/MitchellLeybaCale" target="_blank" rel="noopener noreferrer">https://github.com/MitchellLeybaCale</a></p>
+    </div>
+  </section>
+
+<script>
+  document.querySelectorAll('.toggle-header').forEach(header => {
+    header.addEventListener('click', () => {
+      const content = header.nextElementSibling;
+      content.style.display = content.style.display === 'block' ? 'none' : 'block';
+    });
+  });
+</script>
+
+</body>
+</html>
