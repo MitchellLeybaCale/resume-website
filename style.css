@@ -1,78 +1,49 @@
-/* Reset and base styles */
+/* Basic Reset */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* Body and Global Styles */
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background-color: #f9f9f9;
   color: #333;
   line-height: 1.6;
-  padding: 40px 20px;
 }
 
-/* Layout */
-.container {
-  max-width: 800px;
-  margin: auto;
-  background: #fff;
-  padding: 40px;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-}
-
-/* Header styles */
+/* Header Styles */
 header {
   text-align: center;
-  margin-bottom: 40px;
+  padding: 60px 20px;
+  background-color: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
-h1 {
-  font-size: 2.2rem;
-  margin-bottom: 10px;
+header h1 {
+  font-size: 2.5rem;
   color: #222;
 }
 
-.subtitle {
-  font-size: 1rem;
-  color: #777;
-  margin-bottom: 12px;
+/* Main Content Container */
+main {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 0 20px;
 }
 
-/* Contact links */
-.contact-links {
-  font-size: 0.95rem;
-  color: #555;
-}
-
-.contact-links a {
-  color: #0066cc;
-  text-decoration: none;
-  margin: 0 5px;
-  transition: color 0.3s;
-}
-
-.contact-links a:hover {
-  color: #004080;
-}
-
-.contact-links span {
-  color: #ccc;
-}
-
-/* Section styles */
+/* Section Styles */
 section {
-  margin-bottom: 30px;
+  background-color: #fff;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
-h2 {
-  font-size: 1.4rem;
+section h2 {
+  font-size: 1.5rem;
   margin-bottom: 10px;
-  color: #333;
-}
-
-p {
-  margin-bottom: 10px;
+  color: #444;
 }
