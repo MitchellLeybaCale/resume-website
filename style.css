@@ -80,3 +80,16 @@ a {
 a:hover {
   text-decoration: underline;
 }
+.toggle-header {
+  cursor: pointer;
+  user-select: none;
+}
+
+.toggle-content {
+  display: none; /* hidden by default */
+  margin-top: 15px;
+}
+
+section:hover .toggle-header {
+  color: #004080; /* subtle hover color on the header */
+}

@@ -13,19 +13,21 @@
   </header>
 
   <main>
-    <section id="education">
-  <h2>Education</h2>
-  <p>University of Colorado Boulder Leeds School of Business</p>
-  <p>BS in Business Administration with an emphasis in Finance and Data Analytics</p>
-  <p>Relevant courses:</p>
-  <ul>
-    <li>Communication Strategy</li>
-    <li>Mathematical Analysis in Business</li>
-    <li>Statistical Analysis in Business</li>
-    <li>Quantitative Finance</li>
-    <li>Data & Information Management</li>
-    <li>Business Ethics & Social Responsibility</li>
-  </ul>
+   <section id="education">
+  <h2 class="toggle-header">Education</h2>
+  <div class="toggle-content">
+    <p>University of Colorado Boulder Leeds School of Business</p>
+    <p>BS in Business Administration with an emphasis in Finance and Data Analytics</p>
+    <p>Relevant courses:</p>
+    <ul>
+      <li>Communication Strategy</li>
+      <li>Mathematical Analysis in Business</li>
+      <li>Statistical Analysis in Business</li>
+      <li>Quantitative Finance</li>
+      <li>Data & Information Management</li>
+      <li>Business Ethics & Social Responsibility</li>
+    </ul>
+  </div>
 </section>
 
 
@@ -44,5 +46,18 @@
       <!-- Future contact content goes here -->
     </section>
   </main>
+<script>
+  document.querySelectorAll('.toggle-header').forEach(header => {
+    header.addEventListener('click', () => {
+      const content = header.nextElementSibling;
+      if (content.style.display === "block") {
+        content.style.display = "none";
+      } else {
+        content.style.display = "block";
+      }
+    });
+  });
+</script>
+
 </body>
 </html>
