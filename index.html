@@ -4,8 +4,80 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Mitchell Leyba Cale – Portfolio</title>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Lora:wght@400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Lora:wght@400;600&display=swap" rel="stylesheet" />
+  <style>
+    /* Your existing CSS reset and body styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Lora', serif;
+      background-color: #f9f9f9;
+      color: #333;
+      line-height: 1.7;
+    }
+    header {
+      text-align: center;
+      padding: 80px 20px 60px;
+      background-color: #ffffff;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    }
+    header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 3rem;
+      font-weight: 600;
+      color: #1a1a1a;
+    }
+    main {
+      max-width: 850px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+    section {
+      background-color: #ffffff;
+      border-radius: 10px;
+      padding: 30px;
+      margin-bottom: 30px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+      transition: box-shadow 0.3s ease;
+    }
+    section:hover {
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+    }
+    section h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.8rem;
+      color: #2a2a2a;
+      margin-bottom: 15px;
+      border-bottom: 2px solid #ddd;
+      padding-bottom: 8px;
+      cursor: pointer; /* make it obvious clickable */
+      user-select: none;
+    }
+    p, ul {
+      font-size: 1rem;
+      color: #444;
+      margin-bottom: 10px;
+    }
+    ul {
+      padding-left: 20px;
+      list-style-type: disc;
+    }
+    a {
+      color: #004080;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    /* Initially hide the content */
+    .toggle-content {
+      display: none;
+      margin-top: 15px;
+    }
+  </style>
 </head>
 <body>
   <header>
@@ -13,23 +85,22 @@
   </header>
 
   <main>
-   <section id="education">
-  <h2 class="toggle-header">Education</h2>
-  <div class="toggle-content">
-    <p>University of Colorado Boulder Leeds School of Business</p>
-    <p>BS in Business Administration with an emphasis in Finance and Data Analytics</p>
-    <p>Relevant courses:</p>
-    <ul>
-      <li>Communication Strategy</li>
-      <li>Mathematical Analysis in Business</li>
-      <li>Statistical Analysis in Business</li>
-      <li>Quantitative Finance</li>
-      <li>Data & Information Management</li>
-      <li>Business Ethics & Social Responsibility</li>
-    </ul>
-  </div>
-</section>
-
+    <section id="education">
+      <h2 class="toggle-header">Education</h2>
+      <div class="toggle-content">
+        <p>University of Colorado Boulder Leeds School of Business</p>
+        <p>BS in Business Administration with an emphasis in Finance and Data Analytics</p>
+        <p>Relevant courses:</p>
+        <ul>
+          <li>Communication Strategy</li>
+          <li>Mathematical Analysis in Business</li>
+          <li>Statistical Analysis in Business</li>
+          <li>Quantitative Finance</li>
+          <li>Data & Information Management</li>
+          <li>Business Ethics & Social Responsibility</li>
+        </ul>
+      </div>
+    </section>
 
     <section id="experience">
       <h2>Experience</h2>
@@ -46,18 +117,19 @@
       <!-- Future contact content goes here -->
     </section>
   </main>
-<script>
-  document.querySelectorAll('.toggle-header').forEach(header => {
-    header.addEventListener('click', () => {
-      const content = header.nextElementSibling;
-      if (content.style.display === "block") {
-        content.style.display = "none";
-      } else {
-        content.style.display = "block";
-      }
-    });
-  });
-</script>
 
+  <script>
+    // Toggle content visibility on clicking the header
+    document.querySelectorAll('.toggle-header').forEach(header => {
+      header.addEventListener('click', () => {
+        const content = header.nextElementSibling;
+        if (content.style.display === "block") {
+          content.style.display = "none";
+        } else {
+          content.style.display = "block";
+        }
+      });
+    });
+  </script>
 </body>
 </html>
